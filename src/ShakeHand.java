@@ -5,22 +5,13 @@ public class ShakeHand {
         System.out.println("please enter the amount of people");
         int person = input.nextInt();
 
-        handShake(person);
+        System.out.println("the total amount of handshake for " + person + " person in a room is " + handShake(person));
     }
 
     public static int handShake(int person){
-        if(person <= 1){
+        if(person < 1){
             return 0;
         }
-
-        int countHandShake = 0;
-        if(person%2 == 0){
-            countHandShake++;
-        }else{
-
-        }
-        System.out.println(countHandShake);
-        handShake(person - 2);
-        return countHandShake;
+        return  handShake(person - 1) + (person - 1);
     }
 }
