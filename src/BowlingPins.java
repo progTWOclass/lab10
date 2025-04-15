@@ -12,6 +12,18 @@ public class BowlingPins {
     }
 
     public static int generatePins(int row){
+
+        /* ex: row = 3
+        * generatePins(3-1) + 3 --> generatePins(2)
+        * generatePins(2-1) + 2 + 3 --> generatePins(1)
+        * generatePins(1-1) + 1 + 2 + 3 --> generatePins(0) = 0
+        *
+        * we know that generatePins(0) is 0 because of our base case
+        *
+        * therefore, the program starts going back up and add all those numbers together
+        * answer is 6 pins
+        * */
+
         if(row < 1){
             return 0;
         }

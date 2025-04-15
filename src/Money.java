@@ -19,10 +19,8 @@ public class Money {
             return;
         }
 
-        int countYear = year;
         double amount = initialAmount * Math.pow((1 + rate / 100), year);
-        System.out.printf("your amount is %.2f in year %d\n", amount, countYear);
-        countYear--;
+        System.out.printf("your amount is %.2f in year %d\n", amount, year);
         calculateInterest(initialAmount, rate, year - 1);
     }
 }
